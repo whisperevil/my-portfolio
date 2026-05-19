@@ -149,7 +149,7 @@ function handleSubmit() {
     title: form.value.title,
     description: form.value.description,
     techStack: form.value.techStackStr.split(',').map(s => s.trim()).filter(Boolean),
-    cover: form.value.cover || '/images/placeholder.jpg',
+    cover: form.value.cover || '',
     tags: form.value.tagsStr.split(',').map(s => s.trim()).filter(Boolean),
     status: form.value.status
   }

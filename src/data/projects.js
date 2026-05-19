@@ -1,9 +1,15 @@
 import { ref } from 'vue'
 
+// 图片路径前缀，适配 GitHub Pages 子路径部署
+function img(path) {
+  const base = import.meta.env.BASE_URL || '/'
+  return base + path.replace(/^\//, '')
+}
+
 // ========== 个人基本信息 ==========
 export const personalInfo = {
   name: 'J Are',
-  avatar: '/images/头像.png',
+  avatar: img('/images/头像.png'),
   title: '数字媒体技术 · 大三在读',
   intro: '热爱 IP 衍生、游戏美术与三维动效设计，让创意高效落地。',
   email: '1447288960@qq.com',
@@ -70,12 +76,12 @@ export const projects = ref([{
     title: '衍生品设计',
     description: '聚焦 IP 衍生周边设计，涵盖品牌校园合作与同人二次创作两大方向。在周黑鸭品牌校园合作项目中，以"莓事鸭"创意概念为核心，融合树莓趣味意象与品牌 IP 形象，完成徽章、亚克力挂件、PP夹、杯垫、PVC袋等周边衍生品设计及布展视觉物料统筹，兼顾品牌调性与校园场景适配。在同人衍生设计中，基于热门 IP 进行二次创作，适配徽章等周边载体完成造型与画面设计，平衡角色辨识度与审美表现。积累了从创意构思、工厂对接到线下售卖的完整衍生品设计流程经验。',
     techStack: ['PS', 'AI', 'CSP', 'Sai2', 'CDR', '天生绘画'],
-    cover: '/images/衍生品设计/封面.jpg',
+    cover: img('/images/衍生品设计/封面.jpg'),
     images: [
-      '/images/衍生品设计/1.jpg',
-      '/images/衍生品设计/2.jpg',
-      '/images/衍生品设计/3.jpg',
-      '/images/衍生品设计/4.jpg'
+      img('/images/衍生品设计/1.jpg'),
+      img('/images/衍生品设计/2.jpg'),
+      img('/images/衍生品设计/3.jpg'),
+      img('/images/衍生品设计/4.jpg')
     ],
     demo: '',
     github: '',
@@ -87,13 +93,13 @@ export const projects = ref([{
     title: '矢量插画设计',
     description: '以 Illustrator 为核心工具进行矢量插画创作，聚焦角色设计、扁平风格插画与图形化视觉表达。从草图构思到矢量成稿，注重线条流畅度、色彩搭配与画面层次感，兼顾装饰性与叙事性。作品涵盖角色立绘、场景插画、图标图形及系列主题插画，适用于品牌视觉、媒体配图及衍生品开发等多种场景。',
     techStack: ['Illustrator', 'PS'],
-    cover: '/images/矢量插画/封面.jpg',
+    cover: img('/images/矢量插画/封面.jpg'),
     images: [
-      '/images/矢量插画/1.jpg',
-      '/images/矢量插画/2.jpg',
-      '/images/矢量插画/3.jpg',
-      '/images/矢量插画/4.jpg',
-      '/images/矢量插画/5.jpg'
+      img('/images/矢量插画/1.jpg'),
+      img('/images/矢量插画/2.jpg'),
+      img('/images/矢量插画/3.jpg'),
+      img('/images/矢量插画/4.jpg'),
+      img('/images/矢量插画/5.jpg')
     ],
     demo: '',
     github: '',
@@ -105,14 +111,14 @@ export const projects = ref([{
     title: '《Alien Cat》像素平台跳跃游戏',
     description: '《Alien Cat》为像素风格平台跳跃类游戏，核心围绕粉色外星小猫的末世冒险展开，玩家操控角色躲避障碍、挑战末世物种。本人主要负责美术绘制与部分动画制作，完成场景、角色及道具界面的像素美术设计，制作角色与场景动态效果，保障游戏视觉呈现与玩法体验。',
     techStack: ['PS', 'AE', 'Aseprite', 'Unity'],
-    cover: '/images/Alien Cat/封面.jpg',
+    cover: img('/images/Alien Cat/封面.jpg'),
     images: [
-      '/images/Alien Cat/1.jpg',
-      '/images/Alien Cat/2.jpg',
-      '/images/Alien Cat/3.jpg',
-      '/images/Alien Cat/小猫1.gif',
-      '/images/Alien Cat/小猫2.gif',
-      '/images/Alien Cat/小猫3.gif'
+      img('/images/Alien Cat/1.jpg'),
+      img('/images/Alien Cat/2.jpg'),
+      img('/images/Alien Cat/3.jpg'),
+      img('/images/Alien Cat/小猫1.gif'),
+      img('/images/Alien Cat/小猫2.gif'),
+      img('/images/Alien Cat/小猫3.gif')
     ],
     demo: '',
     github: '',
@@ -124,12 +130,12 @@ export const projects = ref([{
     title: '建模设计',
     description: '聚焦 Q 版人物建模，重点完成角色整体造型搭建与 BJD 发型建模，注重造型的精致度与细节刻画，贴合 Q 版风格的可爱气质，确保建模造型符合设计需求，适配各类周边衍生或相关应用场景，兼顾美观度与实用性，精准呈现 Q 版人物的核心形象。',
     techStack: ['Blender', 'ZBrush'],
-    cover: '/images/建模/封面.jpg',
+    cover: img('/images/建模/封面.jpg'),
     images: [
-      '/images/建模/1.jpg',
-      '/images/建模/2.jpg',
-      '/images/建模/3.jpg',
-      '/images/建模/4.jpg'
+      img('/images/建模/1.jpg'),
+      img('/images/建模/2.jpg'),
+      img('/images/建模/3.jpg'),
+      img('/images/建模/4.jpg')
     ],
     demo: '',
     github: '',
@@ -141,11 +147,11 @@ export const projects = ref([{
     title: '动效设计',
     description: '专注于动效设计工作，具体包含动态图标设计、界面动效设计及 UI 动效设计，通过流畅、贴合场景的动效呈现，增强视觉表现力，优化操作反馈，提升整体视觉体验与使用感，适配各类设计应用场景。',
     techStack: ['AE', 'Rive'],
-    cover: '/images/动效/徽章.gif',
+    cover: img('/images/动效/徽章.gif'),
     images: [
-      '/images/动效/徽章.gif',
-      '/images/动效/按钮.gif',
-      '/images/动效/动效预演.mp4'
+      img('/images/动效/徽章.gif'),
+      img('/images/动效/按钮.gif'),
+      img('/images/动效/动效预演.mp4')
     ],
     demo: '',
     github: '',
